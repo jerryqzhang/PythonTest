@@ -26,7 +26,7 @@ pipeline {
     stage('test') {
       steps {
         echo 'test'
-        echo '{env.env_02}'
+        echo '${env.env_02}'
       }
     }
   }
