@@ -10,7 +10,6 @@ pipeline {
           }
           steps {
             echo 'build'
-            echo '{env.env_02}'
           }
         }
         stage('build2') {
@@ -20,7 +19,6 @@ pipeline {
           }
           steps {
             echo 'build2'
-            timestamps()
           }
         }
       }
@@ -28,6 +26,7 @@ pipeline {
     stage('test') {
       steps {
         echo 'test'
+        echo '{env.env_02}'
       }
     }
   }
