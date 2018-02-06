@@ -27,7 +27,7 @@ pipeline {
       steps {
         echo 'test'
         echo '${env_02}'
-        echo '%env_01%'
+        echo '${env_01}'
       }
     }
   }
