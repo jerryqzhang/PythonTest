@@ -28,6 +28,8 @@ pipeline {
         echo 'test'
         echo '${env_02}'
         echo '${env_01}'
+        sh '''echo "build"
+echo ${env_01}'''
       }
     }
   }
