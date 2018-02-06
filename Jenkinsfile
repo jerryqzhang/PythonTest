@@ -10,6 +10,7 @@ pipeline {
           }
           steps {
             echo 'build'
+            echo '${env_01}'
           }
         }
         stage('build2') {
