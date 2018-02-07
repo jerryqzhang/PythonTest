@@ -13,8 +13,7 @@ pipeline {
             echo 'env.env_01'
             build(job: 'test_py', propagate: true)
             echo 'env.PATH'
-            def username = 'Jenkins'
-            echo 'Hello Mr. ${username}'
+            echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
           }
         }
         stage('build2') {
