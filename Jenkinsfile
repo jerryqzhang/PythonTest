@@ -12,6 +12,7 @@ pipeline {
             echo 'build'
             echo 'env.env_01'
             build(job: 'test_py', propagate: true)
+            echo 'env.PATH'
           }
         }
         stage('build2') {
