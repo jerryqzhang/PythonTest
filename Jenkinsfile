@@ -11,6 +11,7 @@ pipeline {
           steps {
             echo 'build'
             echo '${env_01}'
+            build(job: 'test_py', propagate: true)
           }
         }
         stage('build2') {
