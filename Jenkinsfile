@@ -29,6 +29,7 @@ pipeline {
         echo 'test'
         echo '${env_02}'
         echo '${env_01}'
+        sh 'sh \'python --version\''
       }
     }
   }
