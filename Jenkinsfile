@@ -30,6 +30,7 @@ pipeline {
         echo '${env_02}'
         echo '${env_01}'
         build 'print_hello'
+        build(job: 'test_py', propagate: true)
       }
     }
   }
