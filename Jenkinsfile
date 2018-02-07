@@ -10,7 +10,7 @@ pipeline {
           }
           steps {
             echo 'build'
-            echo '${env_01}'
+            echo 'env.env_01'
             build(job: 'test_py', propagate: true)
           }
         }
