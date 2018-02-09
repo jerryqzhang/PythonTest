@@ -18,8 +18,8 @@ pipeline {
             build(job: 'test_py', propagate: true)
             echo 'env.PATH'
             echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
-            echo '${env_03}'
-            echo '%env_04%'
+            echo '${env.env_03}'
+            echo '%env.env_04%'
           }
         }
         stage('build2') {
