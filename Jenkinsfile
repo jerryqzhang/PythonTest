@@ -18,7 +18,6 @@ pipeline {
             build(job: 'test_py', propagate: true)
             echo 'env.PATH'
             echo "BUILD_ID =  Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
-            sh 'sh \'python --version\''
           }
         }
         stage('build2') {
