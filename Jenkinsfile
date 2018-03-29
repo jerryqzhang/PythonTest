@@ -32,12 +32,21 @@ pipeline {
       }
     }
     stage('test') {
-      steps {
-        echo 'test'
-        echo '${env_02}'
-        echo '${env_01}'
-        build 'print_hello'
-        build(job: 'test_py', propagate: true)
+      parallel {
+        stage('test') {
+          steps {
+            echo 'test'
+            echo '${env_02}'
+            echo '${env_01}'
+            build 'print_hello'
+            build(job: 'test_py', propagate: true)
+          }
+        }
+        stage('') {
+          steps {
+            echo '1223'
+          }
+        }
       }
     }
   }
